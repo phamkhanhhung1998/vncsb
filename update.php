@@ -246,7 +246,7 @@
     <header>
         <div class="header-content">
             <div class="logo-container">
-             <a href="index1.html">   <img src="vncslogo.png" alt="Company Logo" class="logo"> </a>
+             <a href="index.php">   <img src="vncslogo.png" alt="Company Logo" class="logo"> </a>
                 <h1>Hung_NP Bank</h1>
             </div>
             <nav>
@@ -255,6 +255,7 @@
                 <a href="#">Tuyển dụng</a>
                 <a href="#">Đầu tư</a>
                  <a href="#">  <img src="<?php echo $profilePicture ?>" alt="User Image" class="user-image"> </a>
+                 <a href="logout.php" style="height: auto; color: cadetblue;">Đăng xuất</a>
             </nav>
         </div>
     </header>
