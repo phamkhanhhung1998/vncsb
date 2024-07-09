@@ -65,7 +65,7 @@ $sql = "SELECT * FROM user WHERE id = ?";
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <img src="vncslogo.png" alt="" class="logo-img" style="margin-left: 30px ;"> 
-        <h1 class="sitename">Hung_NP Bank</h1>
+        <h1 class="sitename">VNCS Bank</h1>
         
        
       </a>
@@ -152,7 +152,7 @@ $sql = "SELECT * FROM user WHERE id = ?";
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Chào mừng bạn đến với Ngân hàng Hung_NP - Đối tác tài chính tin cậy của bạn. Chúng tôi tự hào là một trong những ngân hàng hàng đầu, cung cấp các dịch vụ tài chính toàn diện và chất lượng cao cho khách hàng cá nhân và doanh nghiệp
+                Chào mừng bạn đến với Ngân hàng VNCS - Đối tác tài chính tin cậy của bạn. Chúng tôi tự hào là một trong những ngân hàng hàng đầu, cung cấp các dịch vụ tài chính toàn diện và chất lượng cao cho khách hàng cá nhân và doanh nghiệp
               </p>
               <ul>
                 <li><i class="bi bi-check-circle-fill"></i> <span>Tài khoản ngân hàng đa dạng.</span></li>
@@ -160,7 +160,7 @@ $sql = "SELECT * FROM user WHERE id = ?";
                 <li><i class="bi bi-check-circle-fill"></i> <span>Dịch vụ thẻ.</span></li>
               </ul>
               <p>
-                Với sứ mệnh "Đồng hành cùng thành công của bạn", Ngân hàng Hung_NP không ngừng nỗ lực nâng cao chất lượng dịch vụ và phát triển các sản phẩm tài chính sáng tạo, nhằm đáp ứng tốt nhất nhu cầu của khách hàng. Hãy để chúng tôi trở thành người bạn đồng hành đáng tin cậy trên con đường xây dựng tương lai tài chính vững mạnh.
+                Với sứ mệnh "Đồng hành cùng thành công của bạn", Ngân hàng VNCS không ngừng nỗ lực nâng cao chất lượng dịch vụ và phát triển các sản phẩm tài chính sáng tạo, nhằm đáp ứng tốt nhất nhu cầu của khách hàng. Hãy để chúng tôi trở thành người bạn đồng hành đáng tin cậy trên con đường xây dựng tương lai tài chính vững mạnh.
               </p>
 
               <div class="position-relative mt-4">
@@ -184,10 +184,10 @@ $sql = "SELECT * FROM user WHERE id = ?";
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="why-box">
-              <h3>Tại sao chọn Hung_NP Bank</h3>
+              <h3>Tại sao chọn VNCS Bank</h3>
               <p>
                 Khi nghĩ đến việc chọn một ngân hàng, chúng ta luôn
-                 muốn tìm một nơi có thể tin cậy và mang lại sự an tâm. Ngân hàng Hung_NP Bank
+                 muốn tìm một nơi có thể tin cậy và mang lại sự an tâm. Ngân hàng VNCS Bank
                   không chỉ là nơi bạn có thể gửi gắm tài sản mà còn là đối tác tài chính luôn sẵn sàng hỗ trợ bạn.
               </p>
               <div class="text-center">
@@ -281,7 +281,7 @@ $sql = "SELECT * FROM user WHERE id = ?";
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Dịch vụ của chúng tôi</h2>
-        <p><span>Check Our</span> <span class="description-title">Hung_NP Service</span></p>
+        <p><span>Check Our</span> <span class="description-title">VNCS Service</span></p>
       </div><!-- End Section Title -->
 
       <div class="container">
