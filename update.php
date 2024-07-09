@@ -4,7 +4,7 @@
     if(!isset($_SESSION['user_id']) ){
         // Nếu không, chuyển hướng đến trang đăng nhập
         header("Location: ./login.php");
-        die();
+        //die();
     }
 
     $user_id = $_SESSION['user_id'];
@@ -384,7 +384,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ssssss", $fullName, $email, $address, $telephone, $profilePicture, $user_session);
         $stmt->execute();
 
-        if ($stmt->affected_rows > 0) {
+        if ($stmt->affected_rows > 0) { // Số dòng bị ảnh hưởng bởi câu lệnh SQL
             echo "Cập nhật thông tin người dùng thành công.";
         } else {
             echo "Cập nhật thông tin người dùng thất bại.";
