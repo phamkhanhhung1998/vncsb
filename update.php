@@ -247,7 +247,7 @@
         <div class="header-content">
             <div class="logo-container">
              <a href="index.php">   <img src="vncslogo.png" alt="Company Logo" class="logo"> </a>
-                <h1>Hung_NP Bank</h1>
+                <h1>VNCS Bank</h1>
             </div>
             <nav>
                 <a href="#">Trang chủ</a>
