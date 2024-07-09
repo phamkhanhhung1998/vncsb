@@ -264,7 +264,7 @@
         <div class="container">
             <div class="form-container">
                 <h2>Edit User Information</h2>
-                <form action="./update.php" method="POST" enctype="multipart/form-data">
+                <form action="update.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="fullname">Full name:</label>
                         <input type="text" id="fullname" name="fullname" value="<?php echo htmlspecialchars($fullName)?>">
