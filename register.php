@@ -11,7 +11,7 @@ if (!$conn) {
 
 // Generate CSRF token if not exists
 if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // 32 bytes = 256 bits , này chuyển giá trị random thành chuỗi hexa nên 32 bytes = 64 kí tự
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,6 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $fullname = mysqli_real_escape_string($conn, $_POST['full_name']);
+
+    // Validate password strength
+    if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/', $password)) {
+        die('Password must be at least 8 characters long and include uppercase and lowercase letters, a number, and a special character.');
+    }
 
     // Hash the password
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
@@ -55,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,14 +106,37 @@ mysqli_close($conn);
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+        .error {
+            color: red;
+            text-align: center;
+        }
     </style>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var errorElement = document.getElementById("error_message");
+            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+            if (!regex.test(password)) {
+                errorElement.textContent = "Password must be at least 8 characters long and include uppercase and lowercase letters, a number, and a special character.";
+                return false;
+            }
+            errorElement.textContent = "";
+            return true;
+        }
+    </script>
 </head>
 <body>
     <h2>Đăng Ký</h2>
-    <form method="post" action="register.php">
+    <form method="post" action="register.php" onsubmit="return validatePassword()">
         <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
         <label for="username">Username</label><br>
         <input type="text" id="username" name="username" required><br>
         <label for="full_name">Full name</label><br>
         <input type="text" id="full_name" name="full_name" required><br>
-        <label for="password">Password</
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Đăng Ký">
+        <div id="error_message" class="error"></div>
+    </form>
+</body>
+</html>
