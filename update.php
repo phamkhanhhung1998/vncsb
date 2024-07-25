@@ -385,9 +385,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) { // Số dòng bị ảnh hưởng bởi câu lệnh SQL
-            echo "Cập nhật thông tin người dùng thành công.";
+           // echo "Cập nhật thông tin người dùng thành công.";
         } else {
-            echo "Cập nhật thông tin người dùng thất bại.";
+          //  echo "Cập nhật thông tin người dùng thất bại.";
         }
     } else {
         // Cập nhật các thông tin khác nếu ảnh không được tải lên thành công
@@ -397,9 +397,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
-            echo "Cập nhật thông tin người dùng thành công (không bao gồm ảnh).";
+           // echo "Cập nhật thông tin người dùng thành công (không bao gồm ảnh).";
         } else {
-            echo "Cập nhật thông tin người dùng thất bại (không bao gồm ảnh).";
+         //   echo "Cập nhật thông tin người dùng thất bại (không bao gồm ảnh).";
         }
     }
 }
